@@ -19,11 +19,27 @@ html {
   --text-subtle: #aaa;
 }
 
+/* Global typography */
 body {
-  font-family: 'YourCustomFont', sans-serif;
+  font-family: 'Tiro Gurmukhi', serif; /* Default text font */
   line-height: 1.6;
   background: var(--bg-main);
   color: var(--text-main);
+}
+
+/* Logo / headings use Shrikhand */
+.logo-text,
+h1, h2, h3, h4 {
+  font-family: 'Shrikhand', cursive;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+/* Paragraphs in lighter gray */
+p {
+  font-family: 'Tiro Gurmukhi', serif;
+  color: var(--text-subtle);
+  font-size: 1rem;
 }
 
 /* Navbar container */
@@ -77,9 +93,10 @@ nav ul {
 }
 
 nav a {
+  font-family: 'Shrikhand', cursive;
   text-decoration: none;
   color: var(--text-main);
-  font-weight: 600;
+  font-weight: 400;
   padding: 0.5rem 0;
   transition: color 0.2s ease;
 }

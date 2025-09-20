@@ -9,17 +9,20 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Navbar */
+:root {
+  --nav-height: 68px;
+  --logo-size: 44px;
+  --accent: #006127;
+  --bg: #000000;     /* black background */
+  --text: #006127; 
+}
+
 body {
   font-family: 'YourCustomFont', sans-serif;
   line-height: 1.6;
-  color: #333;
-}
-
-/* Navbar */
-:root{
-  --nav-height: 68px;   /* change if you want taller/shorter nav */
-  --logo-size: 44px;    /* logo height */
-  --accent: #0073e6;
+  background-color: var(--bg);
+  color: var(--text);
 }
 
 /* Navbar container */
@@ -29,10 +32,10 @@ body {
   left: 0;
   width: 100%;
   height: var(--nav-height);
-  background: #fff;
+  background: var(--bg);
   display: flex;
   align-items: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.06);
+  box-shadow: 0 2px 5px rgba(57, 255, 20, 0.25);  
   z-index: 1000;
   padding: 0 1.25rem;
 }
@@ -49,7 +52,7 @@ body {
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: var(--accent); /* used by inline SVG via currentColor */
+  color: var(--accent);
 }
 
 /* Image logo */
@@ -59,26 +62,9 @@ body {
   display: block;
 }
 
-/* Inline SVG logo adjusts to CSS color */
-.logo svg {
-  width: var(--logo-size);
-  height: var(--logo-size);
-  display: block;
-  color: var(--accent); /* makes circle use this color if fill="currentColor" */
-}
-
-/* Text logo */
-.logo-text {
-  font-family: 'YourCustomFont', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  font-weight: 700;
-  font-size: 1.0rem;
-  margin-left: 0.5rem;
-  color: #111;
-}
-
-/* Navigation (pushed right) */
+/* Navigation */
 nav {
-  margin-left: auto; /* pushes nav to the far right */
+  margin-left: auto;
 }
 
 nav ul {
@@ -90,48 +76,44 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  color: #333;
+  color: var(--text);
   font-weight: 600;
   padding: 0.5rem 0;
   transition: color 0.2s ease;
 }
 
 nav a:hover {
-  color: var(--accent);
+  color: #00732e;
 }
 
 /* Sections */
 .section {
   padding-top: calc(var(--nav-height) + 1.25rem); /* adjust if you change --nav-height */
   min-height: 100vh;
-  box-sizing: border-box;
-}
-
-/* Sections */
-/* .section {
-  min-height: 100vh;
-  padding: 6rem 2rem 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-} */
+  background: var(--bg);
+  color: var(--text);
+  text-align: center;
+}
 
 .home {
-  background: #f9f9f9;
+  background: var(--bg);
   text-align: center;
 }
 
 .about {
-  background: #fff;
+  background: var(--bg);
 }
 
 .projects {
-  background: #f0f4f8;
+  background: var(--bg);
 }
 
 .contact {
-  background: #fff;
+  background: var(--bg);
 }
 
 /* Project cards */
@@ -143,16 +125,19 @@ nav a:hover {
 }
 
 .project-card {
-  background: white;
+  background: #111;
+  color: var(--text);
   padding: 1rem;
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 0 8px rgba(57, 255, 20, 0.3);
 }
 
 /* Footer */
 footer {
   text-align: center;
   padding: 1rem;
-  background: #f9f9f9;
+  background: var(--bg);
   font-size: 0.9rem;
+  color: var(--text);
+  border-top: 1px solid rgba(57, 255, 20, 0.4);
 }
